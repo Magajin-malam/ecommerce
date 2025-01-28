@@ -10,7 +10,7 @@
         </p>
     </div>
     <div class="copyright">
-        <p>2025. Ecommerce. Jagaban </p>
+        <p>&copy; Al-Qalam University Katsina </p>
     </div>
 </footer>
 

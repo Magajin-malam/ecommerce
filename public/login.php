@@ -14,12 +14,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($result) > 0) {
 
         $row = mysqli_fetch_assoc($result);
-
-
-
         $_SESSION['aid'] = $row['aid'];
-
-
 
         header("Location: profile.php");
         exit();
@@ -34,16 +29,16 @@ if (isset($_POST['submit'])) {
 require __DIR__ . '/include/header.php';
 ?>
 <body>
-    <?php require __DIR__ . '/include/header.php'; ?>
+    <?php require __DIR__ . '/include/navbar.php'; ?>
     <form method="post" id="form">
-        <h3 style="color: darkred; margin: auto"></h3>
-        <input class="input1" id="user" name="username" type="text" placeholder="Username *">
-        <input class="input1" id="pass" name="password" type="password" placeholder="Password *">
+        <h3 style="color: #3D8178; margin: auto">Please log in with your details</h3>
+        <input id="user" name="username" type="text" placeholder="Username">
+        <input id="pass" name="password" type="password" placeholder="Password">
         <button type="submit" class="btn" name="submit">login</button>
 
     </form>
 
     <div class="sign">
-        <a href="signup.php" class="signn">Do not have an account?</a>
+        <a href="signup.php" class="signn">Don't have an account?</a>
     </div>
   <?php include __DIR__ . '/include/footer.php' ?>
