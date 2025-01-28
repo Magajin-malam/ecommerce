@@ -16,7 +16,7 @@ if (empty($_SESSION['aid']))
     </section>
 <?php
     // Query to fetch available products randomly
-$query = "SELECT * FROM products WHERE qtyavail > 0 ORDER BY RAND()";
+$query = "SELECT * FROM products WHERE qtyavail > 0 ORDER BY RAND() LIMIT 5";
 $result = mysqli_query($con, $query);
 
 // Start the product section
@@ -45,7 +45,7 @@ $result = mysqli_query($con, $query);
 </section>
 
 
-    <section id="banner" class="section-m1">
+    <section id="banner">
         <a href="shop.php">
             <button class="normal">Explore More</button>
         </a>
