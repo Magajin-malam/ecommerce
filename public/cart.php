@@ -66,10 +66,33 @@ if (isset($_POST['check'])) {
     <section>
     </section>
     <section class="cart-container">
-        <div class="cart-items">
-
+         <div class="cart-item">
+            <img src="assets/favicon.png" alt="6 Blade Starter Kit" class="cart-item-img">
+            <div class="cart-item-details">
+                <h3>6 Blade Starter Kit</h3>
+                <p>2 items</p>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <input type="text" value="1">
+                    <button>+</button>
+                </div>
+            </div>
+            <p class="cart-price">$10</p>
+            <button class="remove-item">×</button>
         </div>
-        <div class="cart-summary"></div>
+        <div class="summary">
+            <h4>Cart Summary</h4>
+            <div class="summary-details">
+                <p>Subtotal (1 Item) <span>$10.00</span></p>
+                <p>Shipping Discount <span class="discount">- $2.00</span></p>
+                <p>Shipping & Handling <span>$4.00</span></p>
+                <p>Tax (Calculated at checkout) <span>$0.00</span></p>
+            </div>
+            <div class="total">
+                <p>Balance <span>$12.00</span></p>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
     </section>
 
 

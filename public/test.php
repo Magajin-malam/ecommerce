@@ -160,20 +160,7 @@ h2 {
     <h2>Your cart</h2>
     <p>1 item ships at checkout</p>
 
-    <div class="cart-item">
-        <img src="assets/favicon.png" alt="6 Blade Starter Kit" class="cart-item-img">
-        <div class="cart-item-details">
-            <h3>6 Blade Starter Kit</h3>
-            <p>2 items</p>
-            <div class="quantity-control">
-                <button>-</button>
-                <input type="text" value="1">
-                <button>+</button>
-            </div>
-        </div>
-        <p class="cart-price">$10</p>
-        <button class="remove-item">×</button>
-    </div>
+   
 </div>
 
 <div class="summary">
