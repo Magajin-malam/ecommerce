@@ -50,24 +50,20 @@ if (isset($_POST['check'])) {
 
         mysqli_query($con, $query);
 
-
     }
     header("Location: checkout.php");
     exit();
 }
 ?>
 
-
 <?php require __DIR__ . '/include/header.php'; ?>
 <body onload="totala()">
      <?php require __DIR__ . '/include/navbar.php'; ?>
     <section class="cart-header">
-        <h2>#GameTillTheEnd</h2>
-        <p>Providing premium gaming experience</p>
+        <h2>Your cart</h2>
+        <p><?php $total_item = 0; echo $total_item; ?> item ships at checkout</p>
     </section>
     <section>
-         <h2>Your cart</h2>
-    <p>1 item ships at checkout</p>
     </section>
     <section class="cart-container">
         <div class="cart-items">
