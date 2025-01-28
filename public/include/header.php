@@ -8,8 +8,8 @@
     <title>Ecommerce</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="icon" href="assets/favicon.png">
 
     <link rel="stylesheet" href="css/style.css" />
-
 
 </head>
