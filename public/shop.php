@@ -21,27 +21,12 @@ $result = mysqli_query($con, $query);
             $price = $row['price'];
             $img = $row['img'];
             $brand = $row['brand'];
-
-            // Fetch average rating for the product
-            $ratingQuery = "SELECT AVG(rating) AS average_rating FROM reviews WHERE pid = $pid GROUP BY pid";
-            $ratingResult = mysqli_query($con, $ratingQuery);
-            $ratingRow = mysqli_fetch_assoc($ratingResult);
-            $stars = $ratingRow ? round($ratingRow['average_rating'], 0) : 0;
-            $emptyStars = 5 - $stars;
             ?>
             <div class="pro" onclick="topage(<?php echo $pid; ?>)">
                 <img src="assets/<?php echo $img; ?>" height="235px" width="235px" alt="">
                 <div class="des">
                     <span><?php echo $brand; ?></span>
                     <h5><?php echo $pname; ?></h5>
-                    <div class="star">
-                        <?php for ($i = 1; $i <= $stars; $i++) : ?>
-                            <i class="fas fa-star"></i>
-                        <?php endfor; ?>
-                        <?php for ($i = 1; $i <= $emptyStars; $i++) : ?>
-                            <i class="far fa-star"></i>
-                        <?php endfor; ?>
-                    </div>
                     <h4>$<?php echo $price; ?></h4>
                 </div>
                 <a onclick="topage(<?php echo $pid; ?>)"><i class="fal fa-shopping-cart cart"></i></a>
@@ -50,7 +35,4 @@ $result = mysqli_query($con, $query);
     </div>
 </section>
 
-
-    }
-    ?>
 <?php include __DIR__ . '/include/footer.php' ?>
