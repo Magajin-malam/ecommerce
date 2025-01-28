@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --primary: #3D8178;
+  --primary: #3d8178;
 }
 * {
   margin: 0;
@@ -1137,19 +1137,8 @@ footer .copyright {
   font-size: 13px;
 }
 
-
-
 ::placeholder {
   font-size: 13px;
-}
-.select1 {
-  display: block;
-  width: 30%;
-  margin: 40px auto;
-  padding: 10px 5px;
-  border: none;
-  border-bottom: 0.01rem dimgray solid;
-  outline: none;
 }
 
 .btn {
@@ -1165,7 +1154,7 @@ footer .copyright {
   cursor: pointer;
 }
 
-a.signn {
+a.signin {
   color: var(--primary);
   font-size: 14px;
   text-decoration: none;
@@ -1514,25 +1503,15 @@ hr {
   margin-left: 20px;
 }
 
-input[type="text"], input[type="password"] {
+.input {
   font-size: 12px;
   border-radius: 5px;
   display: block;
   width: 100%;
   margin: 20px auto;
-  padding: 10px 5px;
+  padding: 12px 5px;
   border: 1px solid #ccc;
   outline: none;
-}
-
-input[type="date"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
 .logup {
@@ -1567,4 +1546,37 @@ input[type="date"] {
 
 input[type="radio"] {
   display: none;
+}
+
+.heart {
+  margin-left: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.star i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+.tb {
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.tb tr {
+  height: 60px;
+  margin: 10px;
+}
+
+.tb td {
+  text-align: center;
+  margin: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.rev {
+  margin: 70px;
 }

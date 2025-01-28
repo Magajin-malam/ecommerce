@@ -32,13 +32,13 @@ require __DIR__ . '/include/header.php';
     <?php require __DIR__ . '/include/navbar.php'; ?>
     <form method="post" id="form">
         <h3 style="color: #3D8178; margin: auto">Please log in with your details</h3>
-        <input id="user" name="username" type="text" placeholder="Username">
-        <input id="pass" name="password" type="password" placeholder="Password">
+        <input class="input" id="user" name="username" type="text" placeholder="Username">
+        <input class="input" id="pass" name="password" type="password" placeholder="Password">
         <button type="submit" class="btn" name="submit">login</button>
 
     </form>
 
     <div class="sign">
-        <a href="signup.php" class="signn">Don't have an account?</a>
+        <a href="signup.php" class="signin">Don't have an account?</a>
     </div>
   <?php include __DIR__ . '/include/footer.php' ?>

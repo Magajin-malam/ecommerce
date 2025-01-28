@@ -73,12 +73,6 @@
                         <td>:</td>
                         <td>Islamabad, Pakistan</td>
                     </tr>
-                    <tr>
-                        <td>CNIC</td>
-                        <td>:</td>
-                        <td>31202-4525142-3</td>
-                    </tr>
-
 
                 </tbody>
             </table>

@@ -34,5 +34,9 @@ $result = mysqli_query($con, $query);
         <?php endwhile; ?>
     </div>
 </section>
-
+<script>
+    function topage(pid) {
+  window.location.href = `sproduct.php?pid=${pid}`;
+}
+</script>
 <?php include __DIR__ . '/include/footer.php' ?>

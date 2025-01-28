@@ -15,11 +15,10 @@ if (isset($_POST['submit'])) {
   $firstname = $_POST['a1'];
   $lastname = $_POST['a2'];
   $email = $_POST['a3'];
-  $cnic = $_POST['a4'];
   $phone = $_POST['a5'];
   $dob = $_POST['a6'];
 
-  $query = "select * from accounts where (cnic='$cnic' or phone='$phone' or email='$email') and aid != $aid ";
+  $query = "select * from accounts where (phone='$phone' or email='$email') and aid != $aid ";
 
   $result = mysqli_query($con, $query);
   $row = mysqli_fetch_assoc($result);
@@ -31,16 +30,12 @@ if (isset($_POST['submit'])) {
     echo "<script> alert('invalid date'); setTimeout(function(){ window.location.href = 'profile.php'; }, 10); </script>";
     exit();
   }
-  if (preg_match('/\D/', $cnic) || strlen($cnic) != 13) {
-    echo "<script> alert('invalid cnic'); setTimeout(function(){ window.location.href = 'profile.php'; }, 10); </script>";
-    exit();
-  }
   if (preg_match('/\D/', $phone) || strlen($phone) != 11) {
     echo "<script> alert('invalid number'); setTimeout(function(){ window.location.href = 'profile.php'; }, 10); </script>";
     exit();
   }
 
-  $query = "UPDATE ACCOUNTS SET afname = '$firstname', alname='$lastname', email='$email', phone='$phone', cnic='$cnic', dob='$dob' WHERE aid = $aid";
+  $query = "UPDATE ACCOUNTS SET afname = '$firstname', alname='$lastname', email='$email', phone='$phone', dob='$dob' WHERE aid = $aid";
 
   $result = mysqli_query($con, $query);
   header("Location: profile.php");
@@ -112,7 +107,6 @@ require __DIR__ . '/include/header.php';
       $alname = $row['alname'];
       $phone = $row['phone'];
       $email = $row['email'];
-      $cnic = $row['cnic'];
       $dob = $row['dob'];
       $user = $row['username'];
       $gender = $row['gender'];
@@ -178,7 +172,6 @@ require __DIR__ . '/include/header.php';
                 $alname = $row['alname'];
                 $phone = $row['phone'];
                 $email = $row['email'];
-                $cnic = $row['cnic'];
                 $dob = $row['dob'];
                 $user = $row['username'];
                 $gender = $row['gender'];
@@ -199,11 +192,6 @@ require __DIR__ . '/include/header.php';
                 <td>Email</td>
                 <td>:</td>
                 <td><input name='a3' type='text' value='$email'></td>
-              </tr>
-              <tr>
-                <td>CNIC</td>
-                <td>:</td>
-                <td><input name='a4' type='text' value='$cnic'></td>
               </tr>
               <tr>
               <td>Phone</td>
@@ -239,7 +227,6 @@ require __DIR__ . '/include/header.php';
                 $alname = $row['alname'];
                 $phone = $row['phone'];
                 $email = $row['email'];
-                $cnic = $row['cnic'];
                 $dob = $row['dob'];
                 $user = $row['username'];
                 $gender = $row['gender'];
@@ -260,11 +247,6 @@ require __DIR__ . '/include/header.php';
                 <td>Email</td>
                 <td>:</td>
                 <td>$email</td>
-              </tr>
-              <tr>
-                <td>CNIC</td>
-                <td>:</td>
-                <td>$cnic</td>
               </tr>
               <tr>
               <td>Phone</td>

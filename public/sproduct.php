@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("include/connect.php");
+require __DIR__ . '/include/connect.php';
 
 $aid = $_SESSION['aid'];
 $sql = "SELECT COUNT(*) FROM CART WHERE aid = '$aid'";
@@ -79,41 +79,7 @@ if (isset($_GET['nw'])) {
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    .heart {
-      margin-left: 25px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .star i {
-  font-size: 12px;
-  color: rgb(243, 181, 25);
-}
-
-.tb {
-        max-height: 400px;
-        overflow-x: auto;
-        overflow-y: auto;
-    }
-
-
-
-    .tb tr {
-        height: 60px;
-        margin: 10px;
-    }
-
-    .tb td {
-        text-align: center;
-        margin: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .rev{
-      margin: 70px;
-    }
-
+   
   </style>
 
 </head>
